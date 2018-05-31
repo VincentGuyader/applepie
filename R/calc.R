@@ -10,4 +10,4 @@ estim_pi <- function(arrows){
   sum(apply(arrows,MARGIN = 1,FUN=in_circle))/nrow(arrows)*4
 }
 
-estim_pi(arrow(100000))
+# estim_pi(arrow(100000))
