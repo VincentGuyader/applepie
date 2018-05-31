@@ -8,10 +8,10 @@
 #'
 #' if (interactive()) {
 #'
-#'   run_app()
+#'   applepie()
 #'
 #' }
 #'
-run_app <- function() {
+applepie <- function() {
   shinyApp(ui = app_ui(), server = app_server)
 }
