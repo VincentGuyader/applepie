@@ -20,11 +20,11 @@ bouclier <- function(){
 
 
 
-impact <- function(arrows){
+impact <- function(arrows,color="red"){
 
  if ( is.null(arrows)){return(bouclier())}
   bouclier()+
-  geom_point(data=setNames(data.frame(arrows),c("x","y")), aes(x, y))
+  geom_point(color=color,data=setNames(data.frame(arrows),c("x","y")), aes(x, y))
 
 }
 

@@ -46,15 +46,13 @@ usethis::use_news_md()
 usethis::use_data_raw()
 
 # For tests
-usethis::use_testthat()
-usethis::use_test("app")
+# usethis::use_testthat()
+# usethis::use_test("app")
 
 # Dependencies
 usethis::use_package("shiny")
-usethis::use_package("DT")
 usethis::use_package("stats")
 usethis::use_package("graphics")
-usethis::use_package("glue")
 usethis::use_package("ggforce")
 usethis::use_package("ggplot2")
 

@@ -24,5 +24,20 @@ output$estim <- renderText({
 req(data$fleche)
   paste("pi estimation : ",estim_pi(data$fleche))
 })
+output$nb_arrow <- renderText({
+req(data$fleche)
+  paste("Number of arrows : ",nrow(data$fleche))
+})
+
+output$source <- renderImage({
+  outfile <- system.file("www","source.png",package = "applepie")
+
+
+  list(src = outfile,
+       contentType = 'image/png',
+       width = 680,
+       height = 820,
+       alt = "")
+}, deleteFile = FALSE)
 
 }
