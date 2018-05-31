@@ -2,22 +2,23 @@
 #' @import shiny
 app_ui <- function() {
   fluidPage(
-    titlePanel("My Awesome Shiny App"),
+    titlePanel("Apple Pie"),
     # Sidebar with a slider input for number of bins
     sidebarLayout(
       sidebarPanel(
-        sliderInput("bins",
-                    "Number of bins:",
+        numericInput("nb",
+                    "Number of arrows to shoot",
                     min = 1,
-                    max = 50,
-                    value = 30),
-        mod_csv_fileInput("fichier")
-      ),
+                    max = Inf,
+                    value = 1)
+      ,
+      actionButton("shoot","shoot"),
+      actionButton("reset","reset")),
 
       # Show a plot of the generated distribution
       mainPanel(
-        plotOutput("distPlot"),
-        DT::DTOutput("tableau")
+        plotOutput("bouclier"),
+        textOutput("estim")
       )
     )
   )

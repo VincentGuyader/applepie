@@ -3,7 +3,7 @@ arrow <- function(n=1){
 }
 
 in_circle <- function(coord=c(0,0)){
- oord[1]**2 + coord[2]**2 <= 1
+ coord[1]**2 + coord[2]**2 <= 1
 }
 
 estim_pi <- function(arrows){

@@ -22,6 +22,7 @@ bouclier <- function(){
 
 impact <- function(arrows){
 
+ if ( is.null(arrows)){return(bouclier())}
   bouclier()+
   geom_point(data=setNames(data.frame(arrows),c("x","y")), aes(x, y))
 
