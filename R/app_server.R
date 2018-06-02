@@ -17,7 +17,7 @@ app_server <- function(input, output,session) {
     })
 
   output$bouclier <- renderPlot({
-    req(data$fleche)
+    #req(data$fleche)
 impact(data$fleche)
     })
 output$estim <- renderText({
