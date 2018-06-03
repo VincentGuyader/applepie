@@ -20,12 +20,16 @@ bouclier <- function(){
 
 
 
-impact <- function(arrows,color="red"){
+impact <- function(arrows, nmax_plot = 20e3, color="red"){
 
- if ( is.null(arrows)){return(bouclier())}
-  bouclier()+
-  geom_point(color=color,data=setNames(data.frame(arrows),c("x","y")), aes(x, y))
-
+  if (is.null(arrows)) {
+    bouclier()
+  } else {
+    n <- min(nrow(arrows), nmax_plot)
+    bouclier() +
+      geom_point(aes(x, y), color = color,
+                 data = setNames(data.frame(arrows[seq_len(n), ]), c("x", "y")))
+  }
 }
 
 # impact(arrows = arrow(100))
