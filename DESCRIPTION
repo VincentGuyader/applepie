@@ -5,8 +5,9 @@ Authors@R: person("Vincent", "Guyader", email = "vincent@thinkr.fr", role = c("a
 Description: Graphical tools to calculate Pi estimation.
 License: GPL-3
 Depends: 
-    R (>= 3.4.3)
+    R (>= 3.4.0)
 Imports: 
+    binom,
     ggforce,
     ggplot2,
     graphics,
